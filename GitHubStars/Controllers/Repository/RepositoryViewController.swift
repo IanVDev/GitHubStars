@@ -45,7 +45,7 @@ class RepositoryViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func bottomLoader() {
         
-        let spinner = UIActivityIndicatorView(style: .gray)
+        let spinner = UIActivityIndicatorView(style: .medium)
         spinner.startAnimating()
         spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
         

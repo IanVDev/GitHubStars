@@ -3,24 +3,28 @@ PODS:
   - Kingfisher (5.15.0):
     - Kingfisher/Core (= 5.15.0)
   - Kingfisher/Core (5.15.0)
+  - Nimble (8.1.1)
   - SwiftGen (5.2.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - Kingfisher (~> 5.0)
+  - Nimble
   - SwiftGen (= 5.2.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Kingfisher
+    - Nimble
     - SwiftGen
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
+  Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
   SwiftGen: 444b4c467e512a4812b8a800d731643fd265139e
 
-PODFILE CHECKSUM: 4ef8ba25772166b38458d092b81d8822f6610c31
+PODFILE CHECKSUM: 7204c7801705c2875abd81d7355ca016e9c73633
 
 COCOAPODS: 1.7.4
