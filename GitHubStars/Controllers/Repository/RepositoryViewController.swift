@@ -8,15 +8,50 @@ class RepositoryViewController: UIViewController, UITableViewDelegate, UITableVi
     //MARK: - Properties
     var repositories = [GitHubModel]()
     
+    var currentPage = 0
+    
+    lazy var refreshControl: UIRefreshControl = {
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(self.handleRefresh),
+                                 for: .valueChanged)
+        return refreshControl
+    }()
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        self.getRepositories()
+        self.setupView()
+        self.getRepositories(page: self.currentPage)
     }
     
     //MARK: - Layout
+    func setupView() {
+        
+        self.tableView.addSubview(self.refreshControl)
+    }
+    
+    @objc func handleRefresh() {
+        
+        self.currentPage = 0
+        
+        self.repositories = [GitHubModel]()
+        
+        self.getRepositories(page: self.currentPage)
+    }
+    
+    func bottomLoader() {
+        
+        let spinner = UIActivityIndicatorView(style: .gray)
+        spinner.startAnimating()
+        spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
+        
+        self.tableView.tableFooterView = spinner
+        self.tableView.tableFooterView?.isHidden = false
+    }
     
     //MARK: - Actions
     
@@ -37,10 +72,19 @@ class RepositoryViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
-    //MARK: - API
-    func getRepositories() {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
-        GitHubAPI.getRepositories(page: 0) { (gitHubListModel, error) in
+        if indexPath.row == self.repositories.count - 1 {
+            
+            self.bottomLoader()
+            self.getRepositories(page: self.currentPage + 1)
+        }
+    }
+    
+    //MARK: - API
+    func getRepositories(page: Int) {
+        
+        GitHubAPI.getRepositories(page: page) { (gitHubListModel, error) in
             
             guard let gitHubListModel = gitHubListModel else { return }
             guard let repositories = gitHubListModel.items else { return }
@@ -52,7 +96,10 @@ class RepositoryViewController: UIViewController, UITableViewDelegate, UITableVi
     //MARK: - API Callback
     func didFetchRepositories(repositories: [GitHubModel]) {
         
-        self.repositories = repositories
+        self.refreshControl.endRefreshing()
+        self.tableView.tableFooterView = nil
+
+        self.repositories.append(contentsOf: repositories)
         
         self.tableView.reloadData()
     }

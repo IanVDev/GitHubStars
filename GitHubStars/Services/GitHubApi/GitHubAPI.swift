@@ -19,7 +19,7 @@ class GitHubAPI: NSObject {
     static func getRepositories(page: Int, completion: @escaping ((_ data: GitHubListModel?,_ error: Error?) -> Void)) {
         
         let parameters = ["page": page,
-                          "per_page": 10]
+                          "per_page": 20]
         
         AF.request(self.sharedInstance.gitHubUrl, method: .get, parameters: parameters).response { response in
             
