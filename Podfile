@@ -6,9 +6,6 @@ target 'GitHubStars' do
   use_frameworks!
 
   # Pods for GitHubStars
-  pod 'SwiftGen', '5.2.1'
   pod 'Alamofire', '~> 5.2'
-  pod 'Kingfisher', '~> 5.0'
-
-  pod 'Nimble'
+  pod 'Kingfisher', '~> 5.0'  
 end

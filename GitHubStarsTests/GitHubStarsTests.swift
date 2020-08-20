@@ -1,10 +1,3 @@
-//
-//  GitHubStarsTests.swift
-//  GitHubStarsTests
-//
-//  Created by Ana Finotti on 19/08/20.
-//  Copyright © 2020 ian. All rights reserved.
-//
 
 import XCTest
 @testable import GitHubStars
@@ -12,30 +5,6 @@ import XCTest
 class GitHubStarsTests: XCTestCase {
     
     var repositories: [GitHubModel]!
-    /*
-     
-     var vehicle: Vehicle!
-     
-     override func setUp() {
-     super.setUp()
-     vehicle = Car(wheels: 4)
-     }
-     
-     func testVehicleHasPossitiveNumberOfWheels() {
-     
-     XCTAssertTrue(vehicle.numberOfWheels > 0)
-     }
-     
-     func testVehicleIsDrivable() {
-     
-     guard let driveableVehicle = (vehicle as? Driveable) else {
-     XCTFail()
-     return
-     }
-     
-     XCTAssertNotNil(driveableVehicle)
-     }
-     */
     
     override func setUp() {
         

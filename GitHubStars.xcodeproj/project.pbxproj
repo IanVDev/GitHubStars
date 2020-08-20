@@ -14,14 +14,11 @@
 		B035B1EE24EDE58000271C85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B035B1ED24EDE58000271C85 /* Assets.xcassets */; };
 		B035B1F124EDE58000271C85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B035B1EF24EDE58000271C85 /* LaunchScreen.storyboard */; };
 		B035B1FA24EDE63B00271C85 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035B1F924EDE63B00271C85 /* RepositoryViewController.swift */; };
-		B057EDA824EDEB880005CD80 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057EDA624EDEB880005CD80 /* Fonts.swift */; };
-		B057EDA924EDEB880005CD80 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057EDA724EDEB880005CD80 /* Storyboards.swift */; };
 		B057EDAD24EDEC5C0005CD80 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057EDAC24EDEC5C0005CD80 /* GitHubAPI.swift */; };
 		B057EDB124EDEDD00005CD80 /* GitHubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057EDB024EDEDD00005CD80 /* GitHubModel.swift */; };
 		B057EDB324EDEE580005CD80 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057EDB224EDEE580005CD80 /* Owner.swift */; };
 		B057EDB524EDF15C0005CD80 /* GitHubListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057EDB424EDF15C0005CD80 /* GitHubListModel.swift */; };
 		B057EDB824EDF3F60005CD80 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057EDB724EDF3F60005CD80 /* RepositoryTableViewCell.swift */; };
-		B0BB3EBA24EDF6940000A8FA /* materialdesignicons-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B035B1FE24EDE9AB00271C85 /* materialdesignicons-webfont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +44,6 @@
 		B035B1F024EDE58000271C85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B035B1F224EDE58000271C85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B035B1F924EDE63B00271C85 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
-		B035B1FE24EDE9AB00271C85 /* materialdesignicons-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "materialdesignicons-webfont.ttf"; sourceTree = "<group>"; };
-		B057EDA624EDEB880005CD80 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		B057EDA724EDEB880005CD80 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		B057EDAC24EDEC5C0005CD80 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		B057EDB024EDEDD00005CD80 /* GitHubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubModel.swift; sourceTree = "<group>"; };
 		B057EDB224EDEE580005CD80 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
@@ -130,7 +124,6 @@
 				B057EDAA24EDEBC80005CD80 /* Services */,
 				B057EDA524EDEB3E0005CD80 /* Supporting */,
 				B057EDA324EDEB0B0005CD80 /* Storyboards */,
-				B057EDA124EDEAE30005CD80 /* Generated */,
 				B035B1F824EDE5A800271C85 /* Controllers */,
 				B035B1FC24EDE99500271C85 /* Resources */,
 			);
@@ -159,34 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				B035B1ED24EDE58000271C85 /* Assets.xcassets */,
-				B035B1FD24EDE99C00271C85 /* Fonts */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		B035B1FD24EDE99C00271C85 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				B035B1FE24EDE9AB00271C85 /* materialdesignicons-webfont.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		B057EDA124EDEAE30005CD80 /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				B057EDA224EDEAF00005CD80 /* SwiftGen */,
-			);
-			path = Generated;
-			sourceTree = "<group>";
-		};
-		B057EDA224EDEAF00005CD80 /* SwiftGen */ = {
-			isa = PBXGroup;
-			children = (
-				B057EDA624EDEB880005CD80 /* Fonts.swift */,
-				B057EDA724EDEB880005CD80 /* Storyboards.swift */,
-			);
-			path = SwiftGen;
 			sourceTree = "<group>";
 		};
 		B057EDA324EDEB0B0005CD80 /* Storyboards */ = {
@@ -286,7 +253,6 @@
 				B035B1DE24EDE57F00271C85 /* Frameworks */,
 				B035B1DF24EDE57F00271C85 /* Resources */,
 				5FC11751AAB7970D48B7A060 /* [CP] Embed Pods Frameworks */,
-				B057EDA024EDEA6A0005CD80 /* SwiftGen */,
 			);
 			buildRules = (
 			);
@@ -349,7 +315,6 @@
 			files = (
 				B035B1F124EDE58000271C85 /* LaunchScreen.storyboard in Resources */,
 				B035B1EE24EDE58000271C85 /* Assets.xcassets in Resources */,
-				B0BB3EBA24EDF6940000A8FA /* materialdesignicons-webfont.ttf in Resources */,
 				B035B1EC24EDE57F00271C85 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,24 +361,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHubStars/Pods-GitHubStars-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B057EDA024EDEA6A0005CD80 /* SwiftGen */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftGen;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen fonts -t swift4 -o $SRCROOT/GitHubStars/Generated/SwiftGen/Fonts.swift $SRCROOT/GitHubStars/Resources/Fonts\n$PODS_ROOT/SwiftGen/bin/swiftgen storyboards -t swift4 -o $SRCROOT/GitHubStars/Generated/SwiftGen/Storyboards.swift $SRCROOT/GitHubStars/Storyboards\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -431,11 +378,9 @@
 			files = (
 				B057EDB824EDF3F60005CD80 /* RepositoryTableViewCell.swift in Sources */,
 				B057EDB524EDF15C0005CD80 /* GitHubListModel.swift in Sources */,
-				B057EDA924EDEB880005CD80 /* Storyboards.swift in Sources */,
 				B035B1FA24EDE63B00271C85 /* RepositoryViewController.swift in Sources */,
 				B057EDB324EDEE580005CD80 /* Owner.swift in Sources */,
 				B057EDB124EDEDD00005CD80 /* GitHubModel.swift in Sources */,
-				B057EDA824EDEB880005CD80 /* Fonts.swift in Sources */,
 				B057EDAD24EDEC5C0005CD80 /* GitHubAPI.swift in Sources */,
 				B035B1E524EDE57F00271C85 /* AppDelegate.swift in Sources */,
 			);

@@ -8,7 +8,7 @@ class RepositoryViewController: UIViewController, UITableViewDelegate, UITableVi
     //MARK: - Properties
     var repositories = [GitHubModel]()
     
-    var currentPage = 0
+    var currentPage = 1
     
     lazy var refreshControl: UIRefreshControl = {
         
@@ -36,7 +36,7 @@ class RepositoryViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @objc func handleRefresh() {
         
-        self.currentPage = 0
+        self.currentPage = 1
         
         self.repositories = [GitHubModel]()
         
@@ -65,9 +65,12 @@ class RepositoryViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryTableViewCell", for: indexPath) as! RepositoryTableViewCell
         
-        let repository = self.repositories[indexPath.row]
+        if indexPath.row <= self.repositories.count {
+            
+            let repository = self.repositories[indexPath.row]
         
-        cell.setupCell(repository: repository)
+            cell.setupCell(repository: repository)
+        }
         
         return cell
     }
@@ -76,8 +79,10 @@ class RepositoryViewController: UIViewController, UITableViewDelegate, UITableVi
         
         if indexPath.row == self.repositories.count - 1 {
             
+            self.currentPage += 1
+            
             self.bottomLoader()
-            self.getRepositories(page: self.currentPage + 1)
+            self.getRepositories(page: self.currentPage)
         }
     }
     
